@@ -2,7 +2,9 @@ package alex.woz;
 import java.util.Scanner;
 import java.time.LocalDate;
 
-public class Register {
+public class Apply {
+    enum Month {JAN, FEB, MAR, APR, MAY, JUN,
+        JUL, AUG, SEP, OCT, NOV, DEC};
     public static void display(){
         Scanner scan = new Scanner(System.in);
         String firstName, lastName, email, phone, location, password, confirmPass, currRole, username;
@@ -36,12 +38,10 @@ public class Register {
         currRole = scan.nextLine();
         System.out.println("Please enter your birth year:");
         bYear = scan.nextInt();
-        System.out.println("Please enter your birth month as a number:");
-        bMonth = scan.nextInt();
+        System.out.println("Please enter the first three letters of your birth month:");
+        bMonth = Month.valueOf(scan.nextLine().toUpperCase()).ordinal();
         System.out.println("Please enter your birth day:");
         bDay = scan.nextInt();
         bDate = LocalDate.of(bYear, bMonth, bDay);
-        Main.user = new User(1, firstName, lastName, username, email, phone, location, password, false, currRole, bDate);
-        Main.user.displayData();
     }
 }
