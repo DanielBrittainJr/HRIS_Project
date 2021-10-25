@@ -11,3 +11,8 @@ add files and folders to intellij project. In order to run you must add the jdbc
 change this info to use the project. You also need to change the parameters within the selectBasicInfo function to use a specific database and access specific information.
 
 I will soon update it to use the DB that etka has provided.
+
+
+Make sure to download and install mysql jdbc connector 
+check out this discussion to learn how to add to project 
+https://stackoverflow.com/questions/30651830/use-jdbc-mysql-connector-in-intellij-idea
