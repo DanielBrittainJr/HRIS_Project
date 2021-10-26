@@ -1,4 +1,4 @@
-package alex.woz;
+package com.woz;
 import java.time.*;
 
 public class User {
@@ -16,6 +16,18 @@ public class User {
         this.location = location;
         this.password = password;
         this.currRole = currRole;
+        this.bDay = bDay;
+        this.isAdmin = isAdmin;
+        this.username = username;
+    }
+    public User(int id, String firstName, String lastName, String username, String email, String phone, String location, String password, boolean isAdmin, LocalDate bDay){
+        this.id =  id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.phone = phone;
+        this.location = location;
+        this.password = password;
         this.bDay = bDay;
         this.isAdmin = isAdmin;
         this.username = username;
@@ -106,5 +118,9 @@ public class User {
 
     public void setPhone(String phone) {
         this.phone = phone;
+    }
+
+    public String getFullName(){
+        return this.firstName + " " + this.lastName;
     }
 }

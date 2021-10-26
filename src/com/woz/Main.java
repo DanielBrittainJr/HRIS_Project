@@ -1,12 +1,14 @@
-package alex.woz;
+package com.woz;
 import java.time.LocalDate;
-import java.util.Locale;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
     static User currUser;
-    static User admin = new User(1, "N/A", "N/A", "Admin", "email@site.com", "(123)456-7890", "USA", "password", true, "Admin", LocalDate.of(2021, 1,1));
-    static User testUser = new User(1, "N/A", "N/A", "User", "email@site.com", "(123)456-7890", "USA", "password", false, "Admin", LocalDate.of(2021, 1,1));
+    static ArrayList<User> allUsers;
+    static User admin = new User(1, "N/A", "N/A", "Admin", "email@site.com", "(123)456-7890", "USA", "password", true, LocalDate.of(2021, 1,1));
+    static User testUser = new User(2, "N/A", "N/A", "User", "email@site.com", "(123)456-7890", "USA", "password", false,  LocalDate.of(2021, 1,1));
+    static int users = 2;
     static String input = "";
     public static void main(String[] args) {
 	// write your code here
@@ -22,6 +24,7 @@ public class Main {
                 } else {
                     System.out.println("Would you like to apply for a job? Please enter 'yes' or 'no'");
                     input = scan.nextLine();
+                    Apply.display();
                 }
             }
         }

@@ -1,4 +1,4 @@
-package alex.woz;
+package com.woz;
 import java.util.Scanner;
 
 public class Login {
@@ -20,7 +20,7 @@ public class Login {
 
         if(username.equals(Main.admin.username) && password.equals(Main.admin.password)){
             Main.currUser = Main.admin;
-            System.out.println("Welcome " + Main.currUser.username + "!");
+            AdminScreen.display();
         }else if (username.equals(Main.testUser.username) && password.equals(Main.testUser.password)){
             Main.currUser = Main.testUser;
             System.out.println("Welcome " + Main.currUser.username + "!");
